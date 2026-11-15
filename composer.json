@@ -1,0 +1,43 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "funseco/checkpoints-plugin",
+    "description": "Funseco checkpoints — /cps difference panel and best checkpoints widget",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.2",
+        "funseco/core": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Funseco\\Checkpoints\\": "src/"
+        }
+    },
+    "require-dev": {
+        "funseco/dedimania-plugin": "@dev",
+        "funseco/menu-plugin": "@dev",
+        "funseco/widgets-plugin": "@dev",
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^10.0",
+        "phpunit/phpunit": "^11.5.3"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Funseco\\Checkpoints\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "funseco": {
+            "id": "checkpoints",
+            "name": "Checkpoints",
+            "description": "checkpoints — /cps difference panel and best checkpoints widget",
+            "provider": "Funseco\\Checkpoints\\CheckpointsServiceProvider"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}
